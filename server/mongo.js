@@ -8,8 +8,7 @@ exports.initialize = async (res) => {
         socketTimeoutMS: 30000,
         maxIdleTimeMS: 60000
     };
-
-    const dbUri = "mongodb+srv://maroof_malik_atlas:o9lCbi62cGB2Gf0I@cluster0.gv34enw.mongodb.net/metakeep?retryWrites=true&w=majority"
+    const dbUri = "mongodb+srv://doadmin:kwO3AZ0v1n49M678@db-mongodb-nyc3-61951-f622e3b2.mongo.ondigitalocean.com/metakeep?authSource=admin&replicaSet=db-mongodb-nyc3-61951&tls=true";
     try {
         await mongoose.connect(`${dbUri}`, mongoOptions);
         console.log('Connect to MongoDb')

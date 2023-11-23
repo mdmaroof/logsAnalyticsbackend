@@ -5,8 +5,6 @@ exports.getLogsList = async (req, res) => {
 
     const { last24HoursFilter, last7daysFilter, fromDate, toDate } = req.query;
 
-    console.log(last24HoursFilter)
-
     let filter = {};
     const currentTime = new Date();
     if (last24HoursFilter) {
@@ -46,8 +44,8 @@ exports.postLogs = async (req, res) => {
     let payload = {
         userId: params.userId,
         status: 'success',
-        request: { test: 1 },
-        response: { test: 2 },
+        request: { request: {} },
+        response: { response: {} },
     }
     let response;
     try {
@@ -67,8 +65,8 @@ exports.postLogsFailed = async (req, res) => {
     let payload = {
         userId: params.userId,
         status: 'success',
-        request: { test: 1 },
-        response: { test: 2 },
+        request: { request: {} },
+        response: { response: {} },
     }
     let response;
     try {
