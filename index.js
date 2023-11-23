@@ -5,7 +5,7 @@ const app = express();
 const mongodbCore = require('./server/mongo');
 const { postLogs, getLogsList, postLogsFailed } = require('./controller/logs');
 
-// mongodbCore.initialize();
+mongodbCore.initialize();
 
 app.use(cors({
     origin: 'http://localhost:5173'
