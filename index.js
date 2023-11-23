@@ -8,7 +8,7 @@ const { postLogs, getLogsList, postLogsFailed } = require('./controller/logs');
 mongodbCore.initialize();
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'https://logs-analytics-frontend.vercel.app'
 }))
 
 app.get('/', function (req, res) {
